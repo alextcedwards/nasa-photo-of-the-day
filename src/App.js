@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 import Main from "./components/Main";
 import Header from "./components/Header";
+import Explain from "./components/explain";
 
 function App() {
   const [nasaData, getNasaData] = useState({});
@@ -22,6 +23,7 @@ function App() {
     <>
       <div>{<Header nasaData={nasaData} />}</div>
       <div>{<Main nasaData={nasaData} />}</div>
+      <div>{<Explain nasaData={nasaData} />}</div>
     </>
   );
 }
