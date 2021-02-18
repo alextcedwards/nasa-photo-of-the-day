@@ -8,7 +8,9 @@ export default function Main(props){
 
     return (
         <div className = 'Main'>
-            <img src={nasaData.url} alt = ""></img>
+            <img src={nasaData.url} alt = ""/>
         </div>
     )
 }
+
+
