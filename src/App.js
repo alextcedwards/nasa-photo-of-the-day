@@ -4,6 +4,17 @@ import axios from "axios";
 import Main from "./components/Main";
 import Header from "./components/Header";
 import Explain from "./components/explain";
+import styled from "styled-components";
+
+const StyledApp = styled.div`
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: black;
+color: white;
+`;
 
 function App() {
   const [nasaData, getNasaData] = useState({});
@@ -20,11 +31,11 @@ function App() {
   }, []);
 
   return (
-    <>
-      <div>{<Header nasaData={nasaData} />}</div>
-      <div>{<Main nasaData={nasaData} />}</div>
-      <div>{<Explain nasaData={nasaData} />}</div>
-    </>
+    <StyledApp>
+      <Header nasaData={nasaData} />
+      <Main nasaData={nasaData} />
+      <Explain nasaData={nasaData} />
+    </StyledApp>
   );
 }
 
